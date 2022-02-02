@@ -59,9 +59,10 @@ export default {
     NCheckbox,
     NInputNumber,
   },
+  props: ["startAmount", "startDuration"],
   setup(props, context) {
-    const loanAmount = ref(300000);
-    const loanDuration = ref(24);
+    const loanAmount = ref(props.startAmount);
+    const loanDuration = ref(props.startDuration);
     const loanInsurance = ref(false);
 
     const durationString = computed(

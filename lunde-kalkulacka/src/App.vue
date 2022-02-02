@@ -2,7 +2,7 @@
   <n-space justify="space-around">
     <n-card title="Vypočítejte si půjčku online">
       <n-space :wrap="false" justify="space-between">
-        <loan-parameter-form @update="updateLoanParameters" />
+        <loan-parameter-form :startDuration="duration" :startAmount="amount" @update="updateLoanParameters" />
         <loan-results
           :amount="amount"
           :duration="duration"
