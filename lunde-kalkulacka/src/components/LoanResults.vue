@@ -4,15 +4,15 @@
       <div class="overlay" v-if="loading">
         <n-spin size="large" style="margin: auto auto" />
       </div>
-      <n-space justify="space-between"
-        ><span>Měsíčně:</span><span>{{ monthlyPayment }} Kč</span></n-space
-      >
-      <n-space justify="space-between"
-        ><span>Úrok:</span><span>{{ interestPercentage }}</span></n-space
-      >
-      <n-space justify="space-between"
-        ><span>Celkem:</span><span>{{ totalAmount }} Kč</span></n-space
-      >
+      <n-space justify="space-between">
+        <span>Měsíčně:</span><span>{{ monthlyPayment }} Kč</span>
+      </n-space>
+      <n-space justify="space-between">
+        <span>Úrok:</span><span>{{ interestPercentage }}</span>
+      </n-space>
+      <n-space justify="space-between">
+        <span>Celkem:</span><span>{{ totalAmount }} Kč</span>
+      </n-space>
     </n-space>
   </n-card>
 </template>
