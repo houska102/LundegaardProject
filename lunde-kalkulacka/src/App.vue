@@ -34,7 +34,7 @@ export default {
     const updateLoanParameters = (newParameters) => {
       amount.value = newParameters.amount;
       duration.value = newParameters.duration;
-      insurance.value = newParameters.loanInsurance;
+      insurance.value = newParameters.insurance;
     };
 
     return {

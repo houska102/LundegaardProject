@@ -28,6 +28,17 @@
         :max="120"
         :format-tooltip="() => durationString"
       />
+      <n-input-number
+        class="loan-time-input"
+        size="small"
+        :step="1"
+        :min="24"
+        :max="120"
+        v-model:value="loanDuration"
+        :show-button="false"
+      >
+        <template #suffix>m</template>
+      </n-input-number>
       <span class="loan-time">{{ durationString }}</span>
     </n-space>
     <n-space>
@@ -65,7 +76,7 @@ export default {
       context.emit("update", {
         amount: loanAmount.value,
         duration: loanDuration.value,
-        loanInsurance: loanInsurance.value,
+        insurance: loanInsurance.value,
       });
       emitChangeTimeout = null;
     };
@@ -97,6 +108,9 @@ export default {
 }
 .loan-amount {
   max-width: 150px;
+}
+.loan-time-input {
+  max-width: 80px;
 }
 .loan-time {
   display: inline-block;
